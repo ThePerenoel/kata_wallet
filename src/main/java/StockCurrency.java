@@ -1,3 +1,3 @@
 public enum StockCurrency {
-    DOLLARS, EURO
+    DOLLARS, EUROS
 }

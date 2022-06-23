@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 public class Wallet {
@@ -13,6 +14,6 @@ public class Wallet {
                 .map(stock -> stock.getValueIn(stockCurrency))
                 .reduce((value1, value2) -> value1.add(value2))
                 .map(calculatedValue -> new WalletValue(calculatedValue, stockCurrency))
-                .orElse(new WalletValue(BigDecimal.ZERO, stockCurrency));
+                .orElse(new WalletValue(BigDecimal.ZERO.setScale(2, RoundingMode.HALF_UP), stockCurrency));
     }
 }

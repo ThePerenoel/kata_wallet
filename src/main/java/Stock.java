@@ -12,14 +12,6 @@ public class Stock {
         this.rateExchanges = rateExchanges;
     }
 
-    public BigDecimal getValue() {
-        return value;
-    }
-
-    public StockCurrency getStockCurrency() {
-        return stockCurrency;
-    }
-
     public BigDecimal getValueIn(StockCurrency expectedStockCurrency) {
         if (expectedStockCurrency == this.stockCurrency) {
             return value;
