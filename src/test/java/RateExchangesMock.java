@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class RateExchangesMock implements RateExchanges{
     @Override
@@ -8,9 +9,9 @@ public class RateExchangesMock implements RateExchanges{
 
         }
         if (currentStockCurrency == StockCurrency.EUROS && expectedStockCurrency == StockCurrency.DOLLARS) {
-            return new BigDecimal("11.0");
+            return new BigDecimal("1.10");
 
         }
-        return BigDecimal.ONE;
+        return BigDecimal.ONE.setScale(2, RoundingMode.HALF_UP);
     }
 }

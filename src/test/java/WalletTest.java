@@ -67,4 +67,17 @@ class WalletTest {
 
         assertThat(result).isEqualTo(walletValue);
     }
+
+    @Test
+    void given_ten_dollars_and_ten_euros_getValue_should_return_twenty_one_dollars() {
+        RateExchangesMock rateExchanges = new RateExchangesMock();
+        Stock dollarStock = new Stock(new BigDecimal("10.00"), StockCurrency.DOLLARS, rateExchanges); //9 euros
+        Stock euroStock = new Stock(new BigDecimal("10.00"), StockCurrency.EUROS, rateExchanges);
+        Wallet wallet = new Wallet(Arrays.asList(dollarStock, euroStock));
+        WalletValue walletValue = new WalletValue(new BigDecimal("21.00"), StockCurrency.DOLLARS);
+
+        WalletValue result = wallet.getValue(StockCurrency.DOLLARS);
+
+        assertThat(result).isEqualTo(walletValue);
+    }
 }
