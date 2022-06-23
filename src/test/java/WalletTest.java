@@ -15,4 +15,14 @@ class WalletTest {
         assertThat(result).isEqualTo(walletValue);
     }
 
+    @Test
+    void given_twenty_dollars_getValue_should_return_twenty_dollars() {
+        Stock stock = new Stock(20, StockCurrency.DOLLARS);
+        Wallet wallet = new Wallet(stock);
+        WalletValue walletValue = new WalletValue(20, StockCurrency.DOLLARS);
+
+        WalletValue result = wallet.getValue();
+
+        assertThat(result).isEqualTo(walletValue);
+    }
 }
