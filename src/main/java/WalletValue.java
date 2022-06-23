@@ -1,10 +1,11 @@
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class WalletValue {
-    private int value;
+    private BigDecimal value;
     private StockCurrency stockCurrency;
 
-    public WalletValue(int value, StockCurrency stockCurrency) {
+    public WalletValue(BigDecimal value, StockCurrency stockCurrency) {
         this.value = value;
         this.stockCurrency = stockCurrency;
     }
@@ -14,7 +15,7 @@ public class WalletValue {
         if (this == o) return true;
         if (!(o instanceof WalletValue)) return false;
         WalletValue that = (WalletValue) o;
-        return value == that.value && stockCurrency == that.stockCurrency;
+        return value.equals(that.value) && stockCurrency == that.stockCurrency;
     }
 
     @Override

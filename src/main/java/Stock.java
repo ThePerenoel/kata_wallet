@@ -1,13 +1,15 @@
+import java.math.BigDecimal;
+
 public class Stock {
-    private int value;
+    private BigDecimal value;
     private StockCurrency stockCurrency;
 
-    public Stock(int value, StockCurrency stockCurrency) {
+    public Stock(BigDecimal value, StockCurrency stockCurrency) {
         this.value = value;
         this.stockCurrency = stockCurrency;
     }
 
-    public int getValue() {
+    public BigDecimal getValue() {
         return value;
     }
 
