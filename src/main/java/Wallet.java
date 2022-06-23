@@ -1,12 +1,11 @@
 public class Wallet {
+    private Stock stock;
 
-    private int valueInEuros;
-
-    public Wallet(int valueInEuros) {
-        this.valueInEuros = valueInEuros;
+    public Wallet(Stock stock) {
+        this.stock = stock;
     }
 
-    public String getValue() {
-        return "10€";
+    public WalletValue getValue() {
+        return new WalletValue(10, StockCurrency.EURO);
     }
 }

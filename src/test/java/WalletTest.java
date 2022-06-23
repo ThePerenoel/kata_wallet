@@ -6,12 +6,13 @@ class WalletTest {
 
     @Test
     void given_ten_euros_getValue_should_return_10_euros() {
-        Wallet wallet = new Wallet(10);
-        String expectedValue = "10€";
+        Stock stock = new Stock(10, StockCurrency.EURO);
+        Wallet wallet = new Wallet(stock);
+        WalletValue walletValue = new WalletValue(10, StockCurrency.EURO);
 
-        String result = wallet.getValue();
+        WalletValue result = wallet.getValue();
 
-        assertThat(result).isEqualTo(expectedValue);
+        assertThat(result).isEqualTo(walletValue);
     }
 
 
