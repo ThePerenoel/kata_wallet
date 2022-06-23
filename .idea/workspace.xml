@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8620bf7-edc8-47dd-898a-638200c2808b" name="Changes" comment="Add getValueIn()">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/StockCurrency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WalletValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StockCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StockCurrency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WalletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WalletTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +54,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.WalletTest">
     <configuration name="WalletTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata_wallet" />
       <option name="PACKAGE_NAME" value="" />
@@ -67,9 +64,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WalletTest.given_ten_euros_getValue_should_return_10_euros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata_wallet" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WalletTest" />
+      <option name="METHOD_NAME" value="given_ten_euros_getValue_should_return_10_euros" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WalletTest" />
+        <item itemvalue="JUnit.WalletTest.given_ten_euros_getValue_should_return_10_euros" />
       </list>
     </recent_temporary>
   </component>

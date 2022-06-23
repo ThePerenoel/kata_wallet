@@ -15,5 +15,4 @@ class WalletTest {
         assertThat(result).isEqualTo(walletValue);
     }
 
-
 }

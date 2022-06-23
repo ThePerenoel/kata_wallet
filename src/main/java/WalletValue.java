@@ -21,4 +21,12 @@ public class WalletValue {
     public int hashCode() {
         return Objects.hash(value, stockCurrency);
     }
+
+    @Override
+    public String toString() {
+        return "WalletValue{" +
+                "value=" + value +
+                ", stockCurrency=" + stockCurrency +
+                '}';
+    }
 }

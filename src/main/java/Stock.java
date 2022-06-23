@@ -6,4 +6,12 @@ public class Stock {
         this.value = value;
         this.stockCurrency = stockCurrency;
     }
+
+    public int getValue() {
+        return value;
+    }
+
+    public StockCurrency getStockCurrency() {
+        return stockCurrency;
+    }
 }

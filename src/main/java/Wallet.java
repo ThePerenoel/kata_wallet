@@ -6,6 +6,6 @@ public class Wallet {
     }
 
     public WalletValue getValue() {
-        return new WalletValue(10, StockCurrency.EURO);
+        return new WalletValue(stock.getValue(), stock.getStockCurrency());
     }
 }
