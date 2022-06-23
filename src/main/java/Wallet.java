@@ -10,8 +10,7 @@ public class Wallet {
 
     public WalletValue getValue(StockCurrency stockCurrency) {
         return stocks.stream()
-                .filter(stock -> stock.getStockCurrency().equals(stockCurrency))
-                .map(stock -> stock.getValue())
+                .map(stock -> stock.getValueIn(stockCurrency))
                 .reduce((value1, value2) -> value1.add(value2))
                 .map(calculatedValue -> new WalletValue(calculatedValue, stockCurrency))
                 .orElse(new WalletValue(BigDecimal.ZERO, stockCurrency));
