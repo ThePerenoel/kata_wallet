@@ -10,7 +10,6 @@ class WalletTest {
 
     @Test
     void given_wallet_is_empty_getValue_should_return_0_euros() {
-        RateExchangesMock rateExchanges = new RateExchangesMock();
         Wallet wallet = new Wallet(new ArrayList<>());
         WalletValue walletValue = new WalletValue(new BigDecimal("0.00"), StockCurrency.EUROS);
 
